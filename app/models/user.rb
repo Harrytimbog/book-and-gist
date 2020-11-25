@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :gist_sessions, foreign_key: "host_id", dependent: :destroy
+  has_one_attached :photo
+  validates :username, presence: true, uniqueness: true
 end
