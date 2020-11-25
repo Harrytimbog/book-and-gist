@@ -10,10 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_25_103050) do
+ActiveRecord::Schema.define(version: 2020_11_25_104557) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.datetime "booking_date"
+    t.bigint "guest_id"
+    t.bigint "gist_session_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["gist_session_id"], name: "index_bookings_on_gist_session_id"
+    t.index ["guest_id"], name: "index_bookings_on_guest_id"
+  end
+
+  create_table "gist_sessions", force: :cascade do |t|
+    t.string "gist"
+    t.string "title"
+    t.text "description"
+    t.string "address"
+    t.datetime "start_time"
+    t.datetime "finish_time"
+    t.integer "capacity"
+    t.bigint "host_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["host_id"], name: "index_gist_sessions_on_host_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +47,12 @@ ActiveRecord::Schema.define(version: 2020_11_25_103050) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "gist_sessions"
+  add_foreign_key "bookings", "users", column: "guest_id"
+  add_foreign_key "gist_sessions", "users", column: "host_id"
 end
