@@ -1,0 +1,13 @@
+.sessioncard {
+  width: 100%;
+  min-height: 80px;
+  border-bottom: 1px solid $linecolor;
+  p {
+    margin: 0px;
+  }
+}
+
+.bookingdescription {
+  flex-grow: 1;
+  margin-left: 2px;
+}

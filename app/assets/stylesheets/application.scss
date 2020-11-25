@@ -11,3 +11,16 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+h1, h2 {
+  font-family: $home-titles;
+}
+
+h4, h5, p {
+  font-family: $body-font;
+}
+
+h5 {
+  font-size: 25px;
+
+}
