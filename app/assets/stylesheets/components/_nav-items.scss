@@ -1,12 +1,12 @@
 .navlink {
   font-family: $body-font;
   text-decoration: none;
-  color: $lightorange;
+  color: $lightpurple;
   &:hover {
     color: white;
     transition-duration: 0.3s;
     text-decoration: none;
-    background-color: $lightorange !important;
+    background-color: $lightpurple !important;
   }
   &.active {
     background-color: white !important;
@@ -14,5 +14,5 @@
 }
 
 .navcolor {
-  background-color: $lightorange;
+  background-color: $lightpurple;
 }

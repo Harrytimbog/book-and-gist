@@ -1,7 +1,7 @@
 .custombtn {
   background-color: white;
-  color: $lightorange;
-  border: 2px solid $lightorange;
+  color: $lightpurple;
+  border: 2px solid $lightpurple;
   text: center;
   border-radius: 3px !important;
   padding: 12px;
@@ -11,7 +11,7 @@
   font-size: 13px !important;
   text-transform: uppercase;;
   &:hover {
-    background-color: $lightorange;
+    background-color: $lightpurple;
     color: white;
     transition-duration: 0.3s;
     text-decoration: none;
@@ -20,9 +20,9 @@
 
 
 .formbtn {
-  background-color: $lightorange;
+  background-color: $lightpurple;
   color: white;
-  border: 1px solid $lightorange;
+  border: 1px solid $lightpurple;
   text: center;
   border-radius: 3px !important;
   padding: 14px;
@@ -33,16 +33,16 @@
   text-transform: uppercase;;
   &:hover {
     background-color: white;
-    color: $lightorange;
+    color: $lightpurple;
     transition-duration: 0.3s;
     text-decoration: none;
   }
 }
 
 .searchbtn {
-  background-color: $lightorange;
+  background-color: $lightpurple;
   color: white;
-  border: 1px solid $lightorange;
+  border: 1px solid $lightpurple;
   text: center;
   border-radius: 3px !important;
   text-decoration: none;
@@ -52,16 +52,16 @@
   text-transform: uppercase;;
   &:hover {
     background-color: white;
-    color: $lightorange;
+    color: $lightpurple;
     transition-duration: 0.3s;
     text-decoration: none;
   }
 }
 
 .homebtn {
-  background-color: $lightorange;
+  background-color: $lightpurple;
   color: white;
-  border: 1px solid $lightorange;
+  border: 1px solid $lightpurple;
   border-radius: 3px !important;
   text-decoration: none;
   text-align: center;
@@ -71,7 +71,7 @@
   text-transform: uppercase;;
   &:hover {
     background-color: white;
-    color: $lightorange;
+    color: $lightpurple;
     transition-duration: 0.3s;
     text-decoration: none;
   }
@@ -89,7 +89,7 @@
 
 .changemindbtn {
   background-color: white;
-  color: $lightorange ;
+  color: $lightpurple ;
   text: center;
   border-radius: 3px !important;
   padding: 10px;
@@ -100,7 +100,7 @@
   text-transform: uppercase;;
   &:hover {
     background-color: white;
-    color: $lightorange;
+    color: $lightpurple;
     transition-duration: 0.3s;
     text-decoration: none;
   }
