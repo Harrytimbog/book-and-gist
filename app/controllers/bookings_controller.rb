@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking_params)
+    @booking = Booking.new(booking_date: params[:booking_date])
     @gist_session = GistSession.find(params[:gist_session_id])
     @booking.gist_session = @gist_session
     @booking.guest = current_user

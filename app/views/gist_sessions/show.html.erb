@@ -1,2 +1,42 @@
-<h1>GistSessions#show</h1>
-<p>Find me in app/views/gist_sessions/show.html.erb</p>
+<div class="container mt-4 mb-4">
+  <div class="row">
+    <div class="col-6">
+      <%= cl_image_tag @gist_session.photo.key, crop: :fill, id:"gistpic" %>
+    </div>
+
+    <div class="col-6">
+
+      <div class="text">
+        <h1><%= @gist_session.title%></h1>
+        <h4><%= @gist_session.description%></h4>
+        <br>
+        <div class="d-flex flex-row bd-highlight">
+          <div class="bd-highlight"><p>60min --</p></div>
+          <div class="bd-highlight ml-1"><p>Max <%= @gist_session.capacity%> people</p></div>
+        </div>
+        <p><%= @gist_session.address%></p>
+        <p><strong><%= @gist_session.address%></strong></p>
+      </div>
+
+      <div class="form">
+        <%= simple_form_for [ @gist_session, @booking ] do |f| %>
+        <select class="form-control" name="booking_date">
+          <option value="2021-01-27T12:00:00">Wednesday, Jan 27</option>
+          <option value="2021-01-29T12:00:00">Friday, Jan 29</option>
+          <option value="2021-02-01T12:00:00">Monday, Feb 01</option>
+        </select>
+        <br>
+        <%= f.submit "Book me", class: "formbtn btn btn-block"%>
+        <%= link_to "Changed your mind?", gist_sessions_path, class: "changemindbtn btn" %>
+
+        <% end %>
+        <br>
+      </div>
+    </div>
+    <div class="container mt-4 border-top">
+      <br>
+    </div>
+  </div>
+</div>
+
+

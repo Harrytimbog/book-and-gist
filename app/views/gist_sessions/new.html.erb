@@ -1,2 +1,8 @@
-<h1>GistSessions#new</h1>
-<p>Find me in app/views/gist_sessions/new.html.erb</p>
+<br>
+<br>
+<div class="d-flex flex-column bd-highlight mb-3 align-items-center">
+  <div class="p-2 bd-highlight" style="color: #FBAB7D"><h1>GREAT, GO AHEAD MATE<br> CREATE YOUR OWN GIST SESSION !</h1></div>
+</div>
+  <div class="p-2 bd-highlight"><%= render 'form', gist_session: @gist_session %></div>
+  <div class="p-2 bd-highlight"><%= link_to 'back to book a session', gist_sessions_path, class: "custombtn btn m-4" %></div>
+
