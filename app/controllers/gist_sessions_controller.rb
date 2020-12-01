@@ -1,6 +1,11 @@
 class GistSessionsController < ApplicationController
   def index
-    @gist_sessions = GistSession.all
+    if params[:query].present?
+      sql_query = "gist ILIKE :query"
+      @gist_sessions = GistSession.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @gist_sessions = GistSession.all
+    end
   end
 
   def show
@@ -21,7 +26,6 @@ class GistSessionsController < ApplicationController
     else
       render :new
     end
-
   end
 
   def destroy
