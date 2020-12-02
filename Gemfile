@@ -31,6 +31,8 @@ gem 'cloudinary', '~> 1.16.0'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise'
+gem 'omniauth-facebook'
+gem 'omniauth-github'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'

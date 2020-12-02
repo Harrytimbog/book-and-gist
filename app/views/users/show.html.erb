@@ -3,9 +3,11 @@
     <div class="col-sm-4">
       <div class="d-flex flex-column bd-highligh align-items-center">
         <div class="p-2 bd-highlight"><h1 class="text-center">Hello <%= @user.username %></h1></div>
-        <div class="p-2 bd-highlight">
-          <%= cl_image_tag @user.photo.key, crop: :fill, id: "userpic" %>
-        </div>
+        <% if @user.photo.attached? %>
+          <div class="p-2 bd-highlight">
+            <%= cl_image_tag @user.photo.key, crop: :fill, id: "userpic" %>
+          </div>
+       <% end %>
         <div class="p-2 bd-highlight">
           <div class="btn-group-vertical mt-4">
             <%= link_to "Create a session", new_gist_session_path, class: "custombtn btn mb-2" %>
